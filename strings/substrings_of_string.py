@@ -14,10 +14,12 @@ def substrings(string: str) -> list:
     ['2', '20', '200', '2001', '0', '00', '001', '0', '01', '1']
     """
     answer = list()
-    for _ in range(0, len(string)):
+    # iterate for every characters of the string
+    for index1 in range(0, len(string)):
         temp = ""
-        for __ in range(_, len(string)):
-            temp += string[__]
+        # substrings relative to each character of string
+        for index2 in range(index1, len(string)):
+            temp += string[index2]
             answer.append(temp)
     return answer
 
